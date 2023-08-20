@@ -1,0 +1,18 @@
+{
+  "hosting": {
+    "public": "out",
+    "cleanUrls": false,
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/applications/**",
+        "destination": "/applications/[id]/index.html",
+        "dynamicLinks": true
+      }
+    ]
+  }
+}
