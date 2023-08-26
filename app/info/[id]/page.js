@@ -107,9 +107,8 @@
 //   }
 // }
 // `pages` directory
-async function getData({params}) {
-  const id = params.id
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+async function getData() {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/`)
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
  
