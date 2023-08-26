@@ -107,15 +107,22 @@
 //   }
 // }
 // `pages` directory
- "use client"
-export async function getStaticProps() {
+async function getData() {
   const id = params.id
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
-  const projects = await res.json()
+  // The return value is *not* serialized
+  // You can return Date, Map, Set, etc.
  
-  return { props: { projects } }
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch data')
+  }
+ 
+  return res.json()
 }
  
-export default function Index({ projects }) {
-  return projects.map((project) => <div>{project.name}</div>)
+export default async function Page() {
+  const data = await getData()
+ 
+  return <main> {data} </main>
 }
