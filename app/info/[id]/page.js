@@ -107,7 +107,7 @@
 //   }
 // }
 // `pages` directory
-async function getData() {
+async function getData({params}) {
   const id = params.id
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
   // The return value is *not* serialized
