@@ -1,7 +1,7 @@
 import axios from "axios"; 
 
 export async function generateMetadata({ params, searchParams }, parent) {
-  const id = params.info
+  const id = params.id
  
   const product = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`).then((res) => res.json())
  
