@@ -8,9 +8,6 @@ import Header from './components/Header'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-  viewport:"width=device-width, initial-scale=1.0",
-}
 
 export default function RootLayout({ children }) {
   useEffect(() => {
