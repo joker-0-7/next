@@ -97,12 +97,12 @@ return(
 </div>
 )
 }
-export async function GetServerSideProps() {
-  const id = params.id
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
-  const resJson = await res.json()
+// export async function GetServerSideProps() {
+//   const id = params.id
+//   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+//   const resJson = await res.json()
  
-  return {
-    props: { resJson }
-  }
-}
+//   return {
+//     props: { resJson }
+//   }
+// }
