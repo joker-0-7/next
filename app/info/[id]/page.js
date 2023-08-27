@@ -14,8 +14,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     },
   }
 }
- 
-export default async function Page({ params, searchParams, resJson }) {
+export default async function Page({ params, searchParams }) {
   const data = await axios.get(`https://jsonplaceholder.typicode.com/posts/3`).then(data => data.data)
 return(
   <div className="app-page bg-dark text-light min-vh-100 pt-3 pb-5">
